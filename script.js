@@ -14,21 +14,18 @@ let timerId = null;
 let isActive = false;
 
 startBtn.addEventListener('click', () => {
-  // console.log('click Start');
   if (isActive) return;
 
   timerId = setInterval(() => {
     bodyEl.backgroundColor = `${
       colors[randomIntegerFromInterval(0, colors.length - 1)]
     }`;
-    // console.log('timer');
   }, 1000);
 
   isActive = true;
 });
 
 stopBtn.addEventListener('click', () => {
-  // console.log('click Stop');
   clearInterval(timerId);
   isActive = false;
 });
